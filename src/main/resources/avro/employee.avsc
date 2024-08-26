@@ -1,0 +1,11 @@
+{
+  "namespace": "com.example.employee_data_gen.model",
+  "type": "record",
+  "name": "Employee",
+  "fields": [
+    {"name": "id", "type": "string"},
+    {"name": "name", "type": "string"},
+    {"name": "age", "type": "int"},
+    {"name": "department", "type": "string"}
+  ]
+}

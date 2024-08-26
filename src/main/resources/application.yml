@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: employee-data-gen
+  kafka:
+    bootstrapServers: http://localhost:9092
+    producer:
+      topicName: test-topic
+      enableIdempotence: true  # Ensure producer idempotence
+      acks: all  # Ensure all in-sync replicas acknowledge the message
+      retries: 5  # Retrying indefinitely on failure
+      maxInFlightRequestsPerConnection: 5  # Prevent reordering of messages
